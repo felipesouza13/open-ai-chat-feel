@@ -61,6 +61,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// ChatGPT specific colors
+				chat: {
+					bg: 'hsl(var(--chat-bg))',
+					sidebar: 'hsl(var(--chat-sidebar))',
+					'sidebar-hover': 'hsl(var(--chat-sidebar-hover))',
+					'message-bg': 'hsl(var(--chat-message-bg))',
+					'user-bg': 'hsl(var(--chat-user-bg))',
+					text: 'hsl(var(--chat-text))',
+					'text-muted': 'hsl(var(--chat-text-muted))',
+					border: 'hsl(var(--chat-border))',
+					input: 'hsl(var(--chat-input))',
+					accent: 'hsl(var(--chat-accent))',
+					'accent-hover': 'hsl(var(--chat-accent-hover))',
+					danger: 'hsl(var(--chat-danger))'
 				}
 			},
 			borderRadius: {
@@ -84,11 +99,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'typing-cursor': {
+					'0%, 50%': { opacity: '1' },
+					'51%, 100%': { opacity: '0' }
+				},
+				'slide-in-from-bottom': {
+					'0%': {
+						transform: 'translateY(100%)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'typing-cursor': 'typing-cursor 1s infinite',
+				'slide-in-from-bottom': 'slide-in-from-bottom 0.3s ease-out'
 			}
 		}
 	},
